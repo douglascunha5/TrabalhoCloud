@@ -9,6 +9,6 @@ public interface MyInterface {
      * The function name is the method name.
      */
     @LambdaFunction
-    ResponseClass AndroidAWSlambda(RequestClass request);
+    ResponseClass AndroidAWSLambda(RequestClass request);
 
 }

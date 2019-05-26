@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         // Initialize the Amazon Cognito credentials provider
         cognitoProvider = new CognitoCachingCredentialsProvider(
                 getApplicationContext(),
-                "us-east-2:f70ecaff-057c-4009-b72f-d1ba29623b44", // Identity pool ID
+                "us-east-2:835564a7-3f70-4a50-b0b4-bb89dc1bd920", // Identity pool ID
                 Regions.US_EAST_2 // Region
         );
 
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 // invoke "echo" method. In case it fails, it will throw a
                 // LambdaFunctionException.
                 try {
-                    return myInterface.AndroidAWSlambda(params[0]);
+                    return myInterface.AndroidAWSLambda(params[0]);
                 } catch (LambdaFunctionException lfe) {
                     Log.e("Tag", "Failed to invoke echo", lfe);
                     return null;
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected ResponseClass doInBackground(RequestClass... params) {
                 try {
-                    return myInterface.AndroidAWSlambda(params[0]);
+                    return myInterface.AndroidAWSLambda(params[0]);
                 } catch (LambdaFunctionException lfe) {
                     Log.e("Tag", "Failed to invoke echo", lfe);
                     return null;
